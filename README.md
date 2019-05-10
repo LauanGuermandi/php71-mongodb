@@ -1,2 +1,2 @@
-# php71-fpm
-Build with PHP 7.1, nginx e composer
+# php71-mongodb
+Build with PHP 7.1 and mongo extension
