@@ -15,3 +15,11 @@ RUN pecl install mongodb
 RUN echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/mongodb.ini
 
 COPY ./ /var/www/html
+
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+RUN cd /var/www/html && composer install --quiet
+
+COPY ./entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT['sh', '/entrypoint.sh']
