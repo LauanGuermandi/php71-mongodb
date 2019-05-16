@@ -22,4 +22,4 @@ RUN cd /var/www/html && composer install --quiet
 
 COPY ./entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT['/bin/bash', '/entrypoint.sh']
+ENTRYPOINT ['/bin/bash', '/entrypoint.sh']
